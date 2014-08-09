@@ -1,0 +1,10 @@
+<input id="search-box" type="search" ng-model="q" results="5" placeholder="Search" />
+<ol id="contact-list">
+    <li ng-repeat="contact in contacts | filter:q | orderBy:'name'">
+        <div class="name">{{contact.name}}</div>
+        <div class="email">{{contact.email}}</div>
+        <div class="phone">{{contact.phone}} ({{contact.extension}})</div>
+        <a href='#/contact/{{contact.id}}'><img class="edit" alt="edit" src="./img/edit.svg" /></a>
+    </li>
+</ol>
+<a id="add" href='#/contact/'></a>

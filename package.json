@@ -1,0 +1,24 @@
+{
+  "name": "phone-list",
+  "version": "0.0.1",
+  "description": "An example application using node-webkit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "gulp": "3.8.x",
+    "gulp-uglifyjs": "0.4.x",
+    "gulp-ruby-sass": "0.5.x"
+  },
+  "repository": "",
+  "keywords": [
+    "node-webkit",
+    "native"
+  ],
+  "author": "Ian Sullivan <iansullivan88@gmail.com>",
+  "license": "BSD",
+  "devDependencies": {
+    "gulp": "^3.8.5"
+  }
+}

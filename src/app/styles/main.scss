@@ -1,0 +1,54 @@
+@import 'reset';
+
+@font-face {
+    font-family: open-sans;
+    src: url(../font/OpenSans-Regular.ttf);
+}
+
+$standardBorder: 1px solid #ccc;
+$headerHeight: 20px;
+$buttonColour: #7d94b5;
+
+body {
+    height:100%;
+    font-family:open-sans, sans-serif;
+    font-size:11px;
+    background:#eee;
+}
+
+#page-wrapper {
+    position:absolute;
+    width:100%;
+    top:0;
+    bottom:0;
+}
+
+header#gui-control {
+    display:none;
+    position:absolute;
+    top:0;
+    width:100%;
+    height:$headerHeight;
+    text-align:right;
+    -webkit-app-region: drag;
+    background:#eee;
+    
+    img {
+        width:16px;
+        cursor:pointer;
+        -webkit-app-region: no-drag;
+        margin-right: 10px;
+        margin-top: 2px;
+    }
+}
+
+body.desktop #page-wrapper {
+    top:$headerHeight;
+}
+
+body.desktop header#gui-control {
+    display:block;
+}
+
+@import 'contact-list';
+@import 'contact'

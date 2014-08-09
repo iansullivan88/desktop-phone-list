@@ -1,0 +1,90 @@
+$searchHeight: 38px;
+$addHeight: 30px;
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+input[type='search'] {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: $searchHeight;
+    padding: 0.5em;
+    margin: 0;
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    border-bottom: $standardBorder;
+}
+
+ol#contact-list {
+    position:absolute;
+    top:$searchHeight;
+    bottom:$addHeight;
+    width:100%;
+    list-style:none;
+    overflow-y:auto;
+    
+    li {
+        position:relative;
+        padding:1em;
+    }
+    
+    div.name {
+        font-size: 1.5em;
+        margin-bottom: 0.2em;   
+    }
+    
+    div.email, div.phone {
+        padding: 3px 0 3px 25px;
+        background: no-repeat left center;
+        background-size: 20px;
+    }
+    
+    div.email {
+        background-image: url('../img/email.svg');
+    }
+    
+    div.phone {
+        background-image: url('../img/phone.svg');
+    }
+    
+    img.edit {
+        position:absolute;
+        right:10px;
+        top:50%;
+        width:20px;
+        margin-top:-10px;
+    }
+}
+
+ol#contact-list::-webkit-scrollbar-track {
+	background:none;
+}
+
+ol#contact-list::-webkit-scrollbar {
+	width: 4px;
+	background-color: none;
+}
+
+ol#contact-list::-webkit-scrollbar-thumb {
+	background-color: #ccc;
+	border: none;
+    border-radius:2px;
+    margin-right:1px;
+}
+
+a#add {
+    position:absolute;
+    display:block;
+    bottom:0;
+    height:$addHeight;
+    width:100%;
+    background: $buttonColour url('../img/add.svg') no-repeat center center;
+    background-size:15px;
+    border-top:$standardBorder;
+}

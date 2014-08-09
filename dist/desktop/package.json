@@ -1,0 +1,10 @@
+{
+	"name": "phone-list-desktop",
+	"main": "index.html",
+    "window": {
+        "toolbar": false,
+        "frame": false,
+        "width": 300,
+        "height": 330
+    }
+}

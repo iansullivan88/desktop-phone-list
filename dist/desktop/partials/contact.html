@@ -1,0 +1,17 @@
+<section ng-show="contact">
+    <form id="contact-form" name="form">
+        <fieldset>
+            <label for="name-field">Name</label>
+            <input id="name-field" type="text" required placeholder="Name" ng-model="contact.name" ng-change="onChange()" autocomplete="off" />
+            <label for="email-field">Email</label>
+            <input id="email-field" type="email" required placeholder="Email" ng-model="contact.email" ng-change="onChange()" autocomplete="off" />
+            <label for="phone-field">Phone</label>
+            <input id="phone-field" type="tel" required placeholder="Phone" ng-model="contact.phone" ng-change="onChange()" autocomplete="off" />
+            <label for="extension-field">Ext.</label>
+            <input id="extension-field" type="number" placeholder="Ext." ng-model="contact.extension" ng-change="onChange()" autocomplete="off" />
+        </fieldset>
+        <button ng-click="save()" ng-disabled="form.$invalid || !needsSave">Save</button>
+        <button ng-click="cancel()">Back</button>
+        <button ng-click="delete()" ng-show="canDelete">Delete</button>
+    </form>
+</section>
