@@ -1,5 +1,7 @@
-Introduction
+Web and Desktop Phone List
 ==================
+
+![phone list](phone-list.png)
 
 An application that demonstrates the ability to share javascript code between the browser and native desktop applications.
 
