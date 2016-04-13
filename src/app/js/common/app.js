@@ -2,6 +2,11 @@ var app = angular.module('phoneListApp', [
     'ngRoute',
     'phoneListApp.controllers',
     'phoneListApp.services'
+]).config([
+    '$compileProvider',
+    function( $compileProvider) {   
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension):/);
+    }
 ]);
 
 app.config(['$routeProvider', '$locationProvider',
