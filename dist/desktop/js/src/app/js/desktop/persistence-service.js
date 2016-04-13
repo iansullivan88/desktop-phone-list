@@ -1,7 +1,7 @@
 angular.module('phoneListApp.services').factory('Persistence', [function () {
     var fs = require('fs'),
         path = require('path'),
-        homeDirectory = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE;
+        homeDirectory = process.env.USERPROFILE || process.env.HOME || process.env.HOMEPATH;
     
     function getJsonFilePath(key) {
         return path.join(homeDirectory, key) + ".json";
